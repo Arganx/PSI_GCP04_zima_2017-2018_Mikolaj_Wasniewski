@@ -10,14 +10,24 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ChartController">
+<BorderPane prefHeight="400.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ChartController">
    <bottom>
       <Button fx:id="button" mnemonicParsing="false" text="Start" BorderPane.alignment="CENTER" />
    </bottom>
-   <center>
-      <SplitPane dividerPositions="0.7274247491638796" prefWidth="391.0" BorderPane.alignment="CENTER">
+   <left>
+      <ScatterChart fx:id="mseChart" prefWidth="500.0" title="Błąd MSE" BorderPane.alignment="CENTER">
+        <xAxis>
+          <NumberAxis label="Epoka" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Bład" side="LEFT" />
+        </yAxis>
+      </ScatterChart>
+   </left>
+   <right>
+      <SplitPane dividerPositions="0.7274247491638796" prefWidth="650.0" BorderPane.alignment="CENTER">
          <items>
-            <ScatterChart fx:id="chart" prefWidth="472.0">
+            <ScatterChart fx:id="chart" minWidth="500.0" prefWidth="500.0" title="Błąd">
               <xAxis>
                 <NumberAxis label="Co mialo wyjsc" side="BOTTOM" fx:id="x" />
               </xAxis>
@@ -25,7 +35,7 @@
                 <NumberAxis fx:id="y" label="Co wyszlo" side="LEFT" />
               </yAxis>
             </ScatterChart>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="114.0">
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="150.0">
                <children>
                   <Label fx:id="whatToDo" text="Podaj liczbe warstw" />
                   <TextField fx:id="input_field" />
@@ -35,5 +45,5 @@
             </VBox>
          </items>
       </SplitPane>
-   </center>
+   </right>
 </BorderPane>

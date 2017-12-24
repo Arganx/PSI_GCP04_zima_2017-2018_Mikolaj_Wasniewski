@@ -1,0 +1,21 @@
+Współczynnik uczenia 0.5
+Zestaw trenujący: 4000 (Akceptowany błąd 5%)
+Rozmiar sieci: 30 20 1
+Wyniki testów na 1000 testów: 62% (Akceptowany błąd 0.5)
+Liczba epok: 18680
+Liczba treningów to osiągnęcia wyników: 18680*4000
+
+Końcowe wartości błądu MSE:
+Blad MSE: 0.3481278462343903
+Blad MSE: 0.3462132483839566
+Blad MSE: 0.34997120870909454
+Blad MSE: 0.347576767361336
+Blad MSE: 0.34514005310097196
+Blad MSE: 0.3442603170001749
+Blad MSE: 0.3453669673382771
+Blad MSE: 0.344100866393521
+Blad MSE: 0.34758794513733704
+Blad MSE: 0.3500210468989861
+Blad MSE: 0.3434399716811604
+Blad MSE: 0.3401017657063013
+

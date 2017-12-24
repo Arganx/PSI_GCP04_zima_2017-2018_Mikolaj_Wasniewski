@@ -10,13 +10,13 @@ public class Neuron {
     private double[] weights;
     private double error;
     private double biasweight;
-    private Double lr = new Double(0.1);
+    private double lr = 0.1;
 
-    public Double getLr() {
+    public double getLr() {
         return lr;
     }
 
-    public Double getBiasweight() {
+    public double getBiasweight() {
         return biasweight;
     }
 

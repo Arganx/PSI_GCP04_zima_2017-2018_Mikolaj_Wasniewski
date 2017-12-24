@@ -45,6 +45,9 @@ public class ChartController {
     @FXML
     private Text information;
 
+    @FXML
+    private ScatterChart mseChart;
+
     private int confirm_count =0;
     private int number_of_layers=0;
     private int[] number_of_neurons_in_layer;
@@ -59,7 +62,10 @@ public class ChartController {
         Changer changer = new Changer();
         chart.setTitle("Wykres bledu");
         XYChart.Series series = new XYChart.Series();
+        XYChart.Series mseSeries = new XYChart.Series();
+        mseSeries.setName("Blad MSE");
         series.setName("Seria 1");
+        mseChart.getData().add(mseSeries);
         chart.getData().add(series);
         stringBuilder.append("Liczba warstw: ");
         information.setText(stringBuilder.toString());
@@ -71,7 +77,7 @@ public class ChartController {
                 //series.getData().add(new XYChart.Data(5,5));
 
                 if(ready) {
-                    TrainingTask treiningTask = new TrainingTask(N, number_of_layers, number_of_neurons_in_layer, changer,series);
+                    TrainingTask treiningTask = new TrainingTask(N, number_of_layers, number_of_neurons_in_layer, changer,series,mseSeries);
                     new Thread(treiningTask).start();
                 }
 /*                if(ready)

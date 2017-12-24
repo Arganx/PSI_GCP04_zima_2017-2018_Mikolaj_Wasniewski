@@ -32,6 +32,7 @@ public class Changer {
             return (mymax-mymin)/(max-min)*(number-max)+mymax;
     }
 
+
     public double activation(Double sum)
     {
         return(2/(1+Math.pow(Math.E,-2*sum)))-1;

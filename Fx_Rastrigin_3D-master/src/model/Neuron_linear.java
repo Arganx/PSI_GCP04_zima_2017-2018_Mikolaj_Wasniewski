@@ -8,10 +8,10 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Neuron_linear extends Neuron {
     private double[] weights;
     private double error;
-    private Double biasweight;
-    private Double lr = new Double(0.1);
+    private double biasweight;
+    private double lr = new Double(0.1);
 
-    public Double getLr() {
+    public double getLr() {
         return lr;
     }
 
